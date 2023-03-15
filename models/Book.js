@@ -24,7 +24,7 @@ Book.init(
       allowNull: false,
     },
     whyBanned: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT("long"),
       allowNull: false,
     },
     // For book cover images
