@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { User, Book, Review } = require("../models");
 
-// route to get all books: this will be the library page eventually
+
 router.get("/", async (req, res) => {
   try {
     const bookData = await Book.findAll();
