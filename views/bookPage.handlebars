@@ -1,0 +1,16 @@
+<h1>{{book.title}}</h1>
+<img src="/images/{{book.filename}}" alt="book image">
+
+<table>
+        <thead>
+            <th>Reviews</th>
+        </thead>
+        <tbody>
+            {{#each book.reviews}}
+                <tr>
+                    <td>{{user_id}}</td>
+                    <td>{{review}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
