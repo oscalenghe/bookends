@@ -1,9 +1,25 @@
 const router = require("express").Router();
 const { User, Book, Review } = require("../models");
+const withAuth = require("../utils/withAuth");
 
-// route to get to profile page
-router.get("/", async (req, res) => {
-  res.render("profile.handlebars");
+// Use withAuth middleware to prevent access to Profile route unless logged in
+router.get("/", withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+      include: [{ model: Book, model: Review }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render("profile.handlebars", {
+      ...user,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

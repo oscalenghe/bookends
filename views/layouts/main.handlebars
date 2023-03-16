@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Bookends</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-  <link rel='stylesheet' type='text/css' media='screen' href='/css/home.css'>
-</head>
+<html lang="en">
 
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookends</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/css/home.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-      <p style="font-size: 40px">Bookends</p>
+      <h1 style="font-size: 40px">Bookends</h1>
       <nav>
         <ul>
           <li>
-            <a><h1>Home</h1></a>
+            <a href="/"><h2>Home</h2></a>
           </li>
 
           <li>
-            <a><h1>Profile</h1></a>
+            <a href="/profile"><h2>Profile</h2></a>
           </li>
 
+          {{#if logged_in}}
             <li>
-              <a href="/login"><h1>Login</h1></a>
+              <button id="logout">Logout</button>
             </li>
+          {{else}}
+            <li>
+              <a href="/login"><h2>Login</h2></a>
+            </li>
+          {{/if}}
 
-            <li>
-              <a ><h1>Log out</h1></a>
-            </li>
         </ul>
       </nav>
     </header>
     <main>
-     {{{body}}}
+      {{{body}}}
     </main>
-    <footer></footer>
+
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
   </body>
+
 </html>

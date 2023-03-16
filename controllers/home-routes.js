@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { User, Book, Review } = require("../models");
-
+const withAuth = require("../utils/withAuth");
 
 router.get("/", async (req, res) => {
   try {
@@ -10,6 +10,7 @@ router.get("/", async (req, res) => {
 
     res.render("home", {
       books,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);
@@ -31,7 +32,7 @@ router.get("/book/:id", async (req, res) => {
 
     const book = dbBookData.get({ plain: true });
     console.log(book);
-    res.render("bookPage", { book });
+    res.render("bookPage", { book, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
