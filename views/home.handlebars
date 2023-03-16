@@ -1,1 +1,13 @@
-<h1>hello world</h1>
+<!-- For each gallery, the 'gallery-details' partial is used to render the gallery data -->
+{{#each books as |book|}}
+    <section class="card">
+    <!-- The contents of this card links to the gallery page using the gallery ID -->
+        <!-- The card contains the gallery name as the card header -->
+        <header>
+        <a href="/book/{{book.id}}"> {{book.title}} </a>
+        </header>
+        <!-- The card contains the first painting of the gallery -->
+        <p>{{book.synopsis}}</p>
+        <img src="/images/{{book.filename}}" alt="book image">
+    </section>
+{{/each}}
