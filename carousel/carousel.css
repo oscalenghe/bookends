@@ -1,0 +1,59 @@
+/* carousel css */
+
+
+.carousel-container {
+    display: grid;
+    place-items: center;
+  }
+  
+  .card-swiper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 75vh;
+    align-items: center;
+  }
+  
+  .card {
+  
+    aspect-ratio: 5/7;
+    width: 300px;
+    border: 1px solid #e5e5e5;
+    transition: transform 0.5s ease-in-out;
+    animation: carousel 0.5s ease-in-out;
+  }
+  
+  .card1 {
+    background-color: antiquewhite;
+  }
+  
+  .card2 {
+    background-color: blueviolet;
+  }
+  
+  .card3 {
+    background-color: cadetblue;
+  }
+  
+  [data-status="left"] {
+    transform: translateX(-15vw) scale(50%);
+    z-index: 1;
+  }
+  
+  [data-status="active"] {
+    transform: translateX(0);
+    z-index: 0;
+  }
+  
+  [data-status="right"] {
+    transform: translateX(15vw) scale(50%);
+    z-index: -1;
+  }
+  
+  
+  button {
+    width: 50px;
+    height: 30px;
+    border: 1px solid #e5e5e5;
+  }
+  
