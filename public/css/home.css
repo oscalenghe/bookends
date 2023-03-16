@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 header {
   display: flex;
   justify-content: space-between;
@@ -167,10 +167,30 @@ form {
   font-weight: bold;
   text-decoration: none;
   font-weight: bold;
-  font-size: 40px;
-  font-weight: 600;
-  padding-top: 2px;
+  font-size: 100%;
+  font-weight: 400;
+
 }
 #logout:hover {
   color: #99c1b9;
+}
+
+
+.bulma-tiles {
+padding: 5%;
+
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.profile-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
 }
