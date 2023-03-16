@@ -159,4 +159,18 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
+}#logout {
+  cursor: pointer;
+  color: #8ea8c3;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+  font-weight: 600;
+  padding-top: 2px;
+}
+#logout:hover {
+  color: #99c1b9;
 }
