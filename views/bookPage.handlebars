@@ -13,4 +13,33 @@
                 </tr>
             {{/each}}
         </tbody>
-    </table>
+</table>
+
+{{#if logged_in}}
+    <div>
+        <div class="review signup">
+        <div class="form-content">
+            <header>Review: {{book.title}}</header>
+            <form id="review-form">
+            <div class="field input-field">
+                <input
+                type="text"
+                placeholder="review text"
+                class="input"
+                id="review"
+                />
+            </div>
+
+            <div class="field button-field">
+                <button type="submit" action="/api/reviews" method="POST">Submit Review</button>
+            </div>
+            </form>
+        </div>
+    </div>
+{{else}}
+            <li>
+              <a href="/login"><h2>Login To Leave Review!</h2></a>
+            </li>
+{{/if}}
+
+<script src="../public/js/review.js"></script>
