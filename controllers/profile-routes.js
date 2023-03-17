@@ -14,7 +14,7 @@ router.get("/", withAuth, async (req, res) => {
 
     let user = userData.get({ plain: true });
     // user = JSON.stringify(user);
-    console.log(JSON.stringify(user));
+    console.log(user);
 
     res.render("profile.handlebars", {
       ...user,

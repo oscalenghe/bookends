@@ -9,29 +9,17 @@
 <section class="bulma-tiles">
 <div class="tile is-ancestor">
   <div class="tile is-12 is-parent">
-    <article class="tile is-child box">
-          <p class="title">{{title}}</p>
-           <p class="subtitle">{{#each reviews as |review|}}
-        {{review.review}}
-        {{/each}}</p>
+    
+      {{#each reviews as |review|}}
+      <article class="tile is-child box">
+        <h2 class="title">{{review.book.title}}</h2>
+           <p class="subtitle">    
+        {{review.review}}</p>  
           <figure class="image is-3by4">
-            {{!-- <img src="/images/{{filename}}"> --}}
+            <img src="/images/{{review.book.filename}}">
           </figure>
-        </article>
-
-    <article class="tile is-child box">
-          <p class="title">Title</p>
-          <figure class="image is-3by4">
-            <img src="https://loremflickr.com/345/450/dog">
-          </figure>
-        </article>
-
-   <article class="tile is-child box">
-          <p class="title">Title</p>
-          <figure class="image is-3by4">
-            <img src="https://loremflickr.com/345/450/person">
-          </figure>
-        </article>
+            </article>
+                {{/each}}
   </div>
 </div>
 </section>
