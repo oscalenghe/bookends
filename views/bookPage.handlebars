@@ -1,45 +1,17 @@
-<h1>{{book.title}}</h1>
-<img src="/images/{{book.filename}}" alt="book image">
-
-<table>
-        <thead>
-            <th>Reviews</th>
-        </thead>
-        <tbody>
-            {{#each book.reviews}}
-                <tr>
-                    <td>{{user_id}}</td>
-                    <td>{{review}}</td>
-                </tr>
-            {{/each}}
-        </tbody>
-</table>
-
-{{#if logged_in}}
-    <div>
-        <div class="review signup">
-        <div class="form-content">
-            <header>Review: {{book.title}}</header>
-            <form id="review-form">
-            <div class="field input-field">
-                <input
-                type="text"
-                placeholder="review text"
-                class="input"
-                id="review"
-                />
-            </div>
-
-            <div class="field button-field">
-                <button type="submit" action="/api/reviews" method="POST">Submit Review</button>
-            </div>
-            </form>
-        </div>
-    </div>
-{{else}}
-            <li>
-              <a href="/login"><h2>Login To Leave Review!</h2></a>
-            </li>
-{{/if}}
-
-<script src="../public/js/review.js"></script>
+<section id="book_page">
+  <div>
+    <img src="/images/{{book.filename}}" alt="book image" width="300">
+  </div>
+  <div>
+    <h2>{{book.title}}</h2>
+    <h3>{{book.author}}</h3>
+    <h4>Synopsis</h4>
+    <p>{{book.synopsis}}</p>
+    <h4>Why Banned</h4>
+    <p>{{book.whyBanned}}</p><br />
+    <h4>Reviews</h4>
+      {{#each book.reviews}}
+        {{review}}
+      {{/each}}
+  </div>
+</section>
