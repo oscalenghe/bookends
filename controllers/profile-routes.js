@@ -12,8 +12,10 @@ router.get("/", withAuth, async (req, res) => {
       include: { all: true, nested: true }
     });
 
-    const user = userData.get({ plain: true });
-    console.log(user);
+    let user = userData.get({ plain: true });
+    // user = JSON.stringify(user);
+    console.log(JSON.stringify(user));
+
     res.render("profile.handlebars", {
       ...user,
       logged_in: true,
