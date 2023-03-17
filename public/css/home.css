@@ -176,6 +176,21 @@ form {
 }
 
 
+/* Individual Book Page Styling */
+#book_page {
+  display: flex;
+}
+#book_page div {
+  margin: 20px;
+}
+#book_page h2,
+#book_page h3,
+#book_page h4,
+#book_page p {
+  padding-bottom: 10px;
+}
+
+
 .bulma-tiles {
 padding: 5%;
 
@@ -194,3 +209,4 @@ padding: 5%;
   justify-content: center;
   padding-top: 5%;
 }
+
