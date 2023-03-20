@@ -7,9 +7,16 @@ Bookends was created with the intention of supporting and promoting banned books
 
 ## Application Showcase
 
-### 
+![README Screenshot](public/screenshots/screenshot01.png)
+
+![README Screenshot](public/screenshots/screenshot02.png)
+
+![README Screenshot](public/screenshots/screenshot03.png)
+
+![README Screenshot](public/screenshots/screenshot04.png)
 
 ## Technologies Used
+
   * Node.js and Express.js
   * MySQL and Sequelize
   * Handlebars
@@ -33,4 +40,4 @@ Bookends was created with the intention of supporting and promoting banned books
 
 ## Resources
 
-[Top 10 Most Challenged Books Lists from the  ALA Office for Intellectual Freedom](https://www.ala.org/advocacy/bbooks/frequentlychallengedbooks/top10)
+* [Top 10 Most Challenged Books Lists from the  ALA Office for Intellectual Freedom](https://www.ala.org/advocacy/bbooks/frequentlychallengedbooks/top10)
