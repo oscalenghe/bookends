@@ -7,6 +7,9 @@ Bookends was created with the intention of supporting and promoting banned books
 
 ## Application Showcase
 
+
+## Deployed Application
+[Bookends via Heroku](https://autumn-bird-7789.herokuapp.com/)
 ### 
 
 ## Technologies Used
